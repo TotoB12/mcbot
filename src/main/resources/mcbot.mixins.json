@@ -3,8 +3,9 @@
 	"package": "com.antoninbeliard.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"MixinMobEntity"
+		"MixinAllayEntity"
 	],
+	"refmap": "mcbot.refmap.json",
 	"injectors": {
 		"defaultRequire": 1
 	}
