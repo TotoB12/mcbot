@@ -1,26 +1,23 @@
 {
 	"schemaVersion": 1,
-	"id": "modid",
+	"id": "mcbot",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "Helper Bot",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"TotoB12"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://totob12.com/",
+		"sources": "https://github.com/TotoB12/mcbot"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/modid/icon.png",
-	"environment": "*",
+	"environment": "server",
 	"entrypoints": {
-		"main": [
-			"com.example.ExampleMod"
-		],
-		"client": [
-			"com.example.ExampleModClient"
-		]
+		"server": [
+            "com.antoninbeliard.HelperBot"
+        ]
 	},
 	"mixins": [
 		"modid.mixins.json",
@@ -31,7 +28,7 @@
 	],
 	"depends": {
 		"fabricloader": ">=0.16.10",
-		"minecraft": "~1.21.4",
+		"minecraft": "~1.21.1",
 		"java": ">=21",
 		"fabric-api": "*"
 	},
