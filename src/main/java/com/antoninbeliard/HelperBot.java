@@ -71,8 +71,10 @@ public class HelperBot implements DedicatedServerModInitializer {
                                                 () -> Text.literal("Bot spawned and teleported to you!"), false);
                                     } else {
                                         // Teleport the existing bot to the player's location
-                                        bot.requestTeleport(player.getX(), player.getY(), player.getZ());
-                                        context.getSource().sendFeedback(() -> Text.literal("Bot teleported to you!"),
+                                        // Command the bot to navigate toward the player's location using its native
+                                        // pathfinding.
+                                        bot.getNavigation().startMovingTo(player, 1.0);
+                                        context.getSource().sendFeedback(() -> Text.literal("Bot navigating to you!"),
                                                 false);
                                     }
                                     return 1;
